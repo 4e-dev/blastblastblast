@@ -9,8 +9,10 @@
 ## 1. Task tracker
 
 ### Work queue
-* [ ] Player movement: Hiding behind the wall (snaps to the closest wall via a keybind)
-* [ ] Player movement: Mouse lock-in mechanic (locks onto selected enemy)
+* [ ] Player movement: Mouse lock-on mechanic (locks mouse onto nearest enemy)
+    * [ ] Create a separate node to represent the player's mouse
+    * [ ] Lock-on mechanic: Middle click to lock onto the nearest enemy
+    * [ ] Lock-off when middle clicking again or the enemy dies
 * [ ] Player projectiles
 * [ ] Player health and damage collision
 * [ ] Base enemy health and damage collision
@@ -362,10 +364,7 @@ Questions that need an answer before implementation.
 
 Ideas that are interesting but are **not currently being implemented**.
 
-* [ ]
-* [ ]
-* [ ]
-* [ ]
+* [ ] Player movement: Hiding behind the wall (snaps to the closest wall via a keybind)
 
 ---
 
