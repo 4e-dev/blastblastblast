@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b2ntu6vdtjg38"]
+
+[ext_resource type="Script" uid="uid://bw208avl74m7m" path="res://scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bm551vv05i54p" path="res://scenes/aim_triangle.gd" id="2_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htwby"]
+size = Vector2(40, 40)
+
+[sub_resource type="LabelSettings" id="LabelSettings_htwby"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="Player" type="CharacterBody2D" unique_id=1351471944]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=371331322]
+shape = SubResource("RectangleShape2D_htwby")
+
+[node name="Sprite" type="ColorRect" parent="." unique_id=1993444669]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 1)
+
+[node name="Label" type="Label" parent="Sprite" unique_id=315745319]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 47.0
+offset_right = 147.0
+offset_bottom = 102.0
+text = "PLAYER"
+label_settings = SubResource("LabelSettings_htwby")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AimTriangle" type="Polygon2D" parent="." unique_id=1760377291]
+script = ExtResource("2_g2els")
