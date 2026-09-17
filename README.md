@@ -1,4 +1,5 @@
 # BLAST BLAST BLAST
+Author: 4E Dev
 
 ## Description
 `

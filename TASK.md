@@ -9,19 +9,24 @@
 ## 1. Task tracker
 
 ### Work queue
+* [ ] Player movement: Hiding behind the wall (snaps to the closest wall via a keybind)
+* [ ] Player movement: Mouse lock-in mechanic (locks onto selected enemy)
 * [ ] Player projectiles
-* [ ] Player health and damage
-* [ ] Base enemy health and damage
+* [ ] Player health and damage collision
+* [ ] Base enemy health and damage collision
 * [ ] Base enemy behavior
 
+
 ### Currently working on
+* [ ] Implement a debug UI to get a better idea of what the player is doing
+    * Example: Are they dodging? dashing? shooting? idling? moving?
+* [ ] Player movement: Dashing / dodging
 
 
 ### Blockers / do later
 
 
 ### Finished
-
 * [x] Base enemy sprite
 * [x] Basic player movement
 

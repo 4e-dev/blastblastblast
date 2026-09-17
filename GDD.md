@@ -1,4 +1,5 @@
 # Game Design Document
+Author: 4E Dev
 
 ## 0. Resources
 Rogue-like godot fundamentals
