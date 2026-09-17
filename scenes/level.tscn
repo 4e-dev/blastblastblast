@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cbsdacrvxms8d"]
+
+[ext_resource type="Texture2D" uid="uid://d031jnb5cw1e8" path="res://assets/textures/prototype/dark/texture_09.png" id="1_w8frs"]
+[ext_resource type="PackedScene" uid="uid://b2ntu6vdtjg38" path="res://scenes/player.tscn" id="2_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://btiu3ggs61ed0" path="res://scenes/enemy.tscn" id="3_ppgk2"]
+
+[node name="Level" type="Node2D" unique_id=852743307]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=615729711]
+offset_left = -930.0
+offset_top = -535.0
+offset_right = 2772.0
+offset_bottom = 1562.0
+texture = ExtResource("1_w8frs")
+stretch_mode = 1
+
+[node name="Player" parent="." unique_id=1351471944 instance=ExtResource("2_mx8sn")]
+position = Vector2(959, 524)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1559088652]
+position = Vector2(964, 517)
+
+[node name="EnemyBase" parent="." unique_id=217677153 instance=ExtResource("3_ppgk2")]
+position = Vector2(1454, 476)
