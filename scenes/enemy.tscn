@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://btiu3ggs61ed0"]
 
-[ext_resource type="Script" uid="uid://csbtm0ys8ip8l" path="res://scenes/sprite_label.gd" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://csbtm0ys8ip8l" path="res://scripts/sprite_label.gd" id="1_7p1mj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htwby"]
 size = Vector2(150, 150)
 
 [node name="EnemyBase" type="CharacterBody2D" unique_id=217677153]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=728205576]
+shape = SubResource("RectangleShape2D_htwby")
 
 [node name="Sprite" type="ColorRect" parent="." unique_id=1580454784]
 anchors_preset = 8
@@ -27,6 +30,3 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "enemy base"
 script = ExtResource("1_7p1mj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=728205576]
-shape = SubResource("RectangleShape2D_htwby")
