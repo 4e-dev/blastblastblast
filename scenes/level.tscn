@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d031jnb5cw1e8" path="res://assets/textures/prototype/dark/texture_09.png" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://b2ntu6vdtjg38" path="res://scenes/player.tscn" id="2_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://btiu3ggs61ed0" path="res://scenes/enemy.tscn" id="3_ppgk2"]
+[ext_resource type="Script" uid="uid://dg60jn70w2fsa" path="res://scripts/mouse_cursor.gd" id="4_mx8sn"]
 
 [node name="Level" type="Node2D" unique_id=852743307]
 
@@ -22,3 +23,8 @@ position = Vector2(964, 517)
 
 [node name="EnemyBase" parent="." unique_id=217677153 instance=ExtResource("3_ppgk2")]
 position = Vector2(1454, 476)
+
+[node name="MouseCursor" type="CanvasLayer" parent="." unique_id=94009564]
+script = ExtResource("4_mx8sn")
+
+[node name="Sprite2D" type="Sprite2D" parent="MouseCursor" unique_id=2116132247]
