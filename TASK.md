@@ -10,7 +10,8 @@
 
 ### Work queue
 * [ ] Player movement: Mouse lock-on mechanic (locks mouse onto nearest enemy)
-    * [ ] Create a separate node to represent the player's mouse
+    * [x] Create a separate node to represent the player's mouse
+    * [x] Create custom cursor asset
     * [ ] Lock-on mechanic: Middle click to lock onto the nearest enemy
     * [ ] Lock-off when middle clicking again or the enemy dies
 * [ ] Player projectiles
