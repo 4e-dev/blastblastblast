@@ -6,6 +6,8 @@ extends CanvasLayer
 @onready var cursor_sprite = $Sprite2D
 @onready var lock_on_area2d = $LockOnRadius
 @onready var lock_on_collision_shape = $LockOnRadius/CollisionShape2D
+@onready var locked_on_enemy: EnemyBase = null
+@onready var locked_on_enemies = {}
 
 # virtual functions
 func _ready() -> void:
@@ -16,6 +18,10 @@ func _ready() -> void:
 	set_custom_cursor_image()
 
 func _input(event):
+	# TODO: REMOVE THIS LINE AFTER TESTING
+	#if event is InputEventMouseMotion:
+	#	#print(locked_on_enemy)
+	#	print(locked_on_enemies)
 	if event.is_action_pressed("lock_onto_enemy"):
 		lock_onto_enemy()
 
@@ -26,10 +32,29 @@ func _process(delta: float) -> void:
 
 # custom functions
 func lock_onto_enemy():
-	# TODO: working on this function
-	print("locking onto closest enemy")
-
 	# search for enemies with a certain radius and lock onto the closest one within the radius
+
+	# TODO: within the enemies set, select the enemy closest to the center of the cursor (?)
+	# 1. get the cursor position
+	# 2. for every enemy, calculate their distance away from the cursor
+	# 3. return back the enemybase whose distance is closest to the cursor's position
+	# 4. update the variable represetnign the locked on enemy
+	# 5. lock the mouse's position onto the enemy
+	# 6. remove the lock if either the enemy dies or the player middle clicks again
+
+	print("TEST")
+	var closest_enemy: Array[int] = {null, INF}
+		
+
+	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
+	for enemy in locked_on_enemies:
+		if closest_enemy is null:
+			closest_enemy = enemy
+			break
+		if enemy > closest_enemy
+		
+
+
 
 
 func set_custom_cursor_image():
@@ -43,4 +68,8 @@ func set_custom_cursor_image():
 # signals
 func _on_lock_on_radius_body_entered(body):
 	if body is EnemyBase:
-		print("enemy entered lock on radius")
+		locked_on_enemies[body] = true
+
+func _on_lock_on_radius_body_exited(body):
+	if body is EnemyBase:
+		locked_on_enemies.erase(body)
