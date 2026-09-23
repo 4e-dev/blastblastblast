@@ -3,9 +3,9 @@ extends CanvasLayer
 @export var cursor_image_path: String = "res://assets/textures/cursor/PNG/White/crosshair013.png"
 @export var cursor_size: float = 2.0
 @export var lock_on_radius_size: float = 200.0
+@onready var cursor_sprite: Sprite2D = $Sprite2D
+@onready var lock_on_area2d: Area2D = $LockOnRadius
 @onready var lock_on_collision_shape: CollisionShape2D = $LockOnRadius/CollisionShape2D
-var cursor_sprite: Sprite2D = $Sprite2D
-var lock_on_area2d: Area2D = $LockOnRadius
 var locked_on := false
 var locked_on_enemies: Dictionary[EnemyBase, bool] = {}
 var locked_on_enemy: EnemyBase = null
