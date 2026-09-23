@@ -9,14 +9,10 @@
 ## 1. Task tracker
 
 ### Work queue
-* [ ] Player movement: Mouse lock-on mechanic (locks mouse onto nearest enemy)
-    * [x] Create a separate node to represent the player's mouse
-    * [x] Create custom cursor asset
-    * [ ] Lock-on mechanic: Middle click to lock onto the nearest enemy
-    * [ ] Lock-off when middle clicking again or the enemy dies
+* [ ] Base enemy health and damage collision
+* [ ] Lock-on mechanic: Middle click to lock onto the nearest enemy
 * [ ] Player projectiles
 * [ ] Player health and damage collision
-* [ ] Base enemy health and damage collision
 * [ ] Base enemy behavior
 
 
@@ -30,6 +26,10 @@
 
 
 ### Finished
+* [x] Player movement: Mouse lock-on mechanic (locks mouse onto nearest enemy)
+    * [x] Create a separate node to represent the player's mouse
+    * [x] Create custom cursor asset
+    * [x] Lock-off when middle clicking again or the enemy dies
 * [x] Base enemy sprite
 * [x] Basic player movement
 
