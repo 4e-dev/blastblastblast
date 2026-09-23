@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://tmtpcxysw5q8"]
-
-[ext_resource type="Texture2D" uid="uid://v81ywslcii4u" path="res://assets/textures/cursor/PNG/Black/crosshair007.png" id="1_1eco6"]
-
-[node name="Cursor" type="Sprite2D" unique_id=360450126]
-texture_filter = 1
-texture = ExtResource("1_1eco6")

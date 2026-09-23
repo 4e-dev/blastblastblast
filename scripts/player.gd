@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
 @export var speed := 600.0
+@onready var label = $Sprite/Label
+
+func _ready():
+	label.text = name
 
 func _physics_process(delta):
 	# Movement (WASD)

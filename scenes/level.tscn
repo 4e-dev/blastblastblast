@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://d031jnb5cw1e8" path="res://assets/textures/prototype/dark/texture_09.png" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://b2ntu6vdtjg38" path="res://scenes/player.tscn" id="2_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://btiu3ggs61ed0" path="res://scenes/enemy.tscn" id="3_ppgk2"]
+[ext_resource type="Script" uid="uid://dg60jn70w2fsa" path="res://scripts/mouse_cursor.gd" id="4_mx8sn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htwby"]
+radius = 61.2
 
 [node name="Level" type="Node2D" unique_id=852743307]
 
@@ -20,5 +24,23 @@ position = Vector2(959, 524)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1559088652]
 position = Vector2(964, 517)
 
-[node name="EnemyBase" parent="." unique_id=217677153 instance=ExtResource("3_ppgk2")]
+[node name="MouseCursor" type="CanvasLayer" parent="." unique_id=94009564]
+script = ExtResource("4_mx8sn")
+
+[node name="Sprite2D" type="Sprite2D" parent="MouseCursor" unique_id=2116132247]
+
+[node name="LockOnRadius" type="Area2D" parent="MouseCursor" unique_id=1946385847]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseCursor/LockOnRadius" unique_id=775225045]
+shape = SubResource("CircleShape2D_htwby")
+
+[node name="Enemies" type="Node2D" parent="." unique_id=720681690]
+
+[node name="EnemyBase2" parent="Enemies" unique_id=217677153 instance=ExtResource("3_ppgk2")]
+position = Vector2(1297, 727)
+
+[node name="EnemyBase" parent="Enemies" unique_id=2053851847 instance=ExtResource("3_ppgk2")]
 position = Vector2(1454, 476)
+
+[connection signal="body_entered" from="MouseCursor/LockOnRadius" to="MouseCursor" method="_on_lock_on_radius_body_entered"]
+[connection signal="body_exited" from="MouseCursor/LockOnRadius" to="MouseCursor" method="_on_lock_on_radius_body_exited"]

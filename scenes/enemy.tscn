@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://btiu3ggs61ed0"]
 
 [ext_resource type="Script" uid="uid://csbtm0ys8ip8l" path="res://scripts/sprite_label.gd" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://dewqw34jdlb22" path="res://scripts/enemy_base.gd" id="1_md0e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htwby"]
 size = Vector2(150, 150)
 
 [node name="EnemyBase" type="CharacterBody2D" unique_id=217677153]
+script = ExtResource("1_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=728205576]
 shape = SubResource("RectangleShape2D_htwby")
