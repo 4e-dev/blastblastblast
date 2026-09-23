@@ -10,6 +10,8 @@
 
 ### Work queue
 * [ ] Base enemy health and damage collision
+    * [ ] Give an enemy a health bar
+    * [ ] Basic shooting mechanic (both for the enemy and the player)
 * [ ] Lock-on mechanic: Middle click to lock onto the nearest enemy
 * [ ] Player projectiles
 * [ ] Player health and damage collision
