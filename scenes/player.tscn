@@ -1,38 +1,75 @@
 [gd_scene format=3 uid="uid://b2ntu6vdtjg38"]
 
 [ext_resource type="Script" uid="uid://bw208avl74m7m" path="res://scripts/player.gd" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://bm551vv05i54p" path="res://scripts/aim_indicator.gd" id="2_g2els"]
-[ext_resource type="Script" uid="uid://csbtm0ys8ip8l" path="res://scripts/sprite_label.gd" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://b1h2qvvhpgger" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f0.png" id="2_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://b3v4r3polw7f4" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_hit_anim_f0.png" id="2_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://bniusax5sy3ln" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f1.png" id="3_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://cjuqm6t73vywq" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f2.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://rkrolcfsl8ij" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f3.png" id="5_smehm"]
+[ext_resource type="Texture2D" uid="uid://ccjlh53wr5lmj" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_run_anim_f0.png" id="7_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://u8oy7bcmfqga" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_run_anim_f1.png" id="8_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://dtno72dg2dd24" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_run_anim_f2.png" id="9_jej6c"]
+[ext_resource type="Texture2D" uid="uid://bxhe1j25aw5xa" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/knight_f_run_anim_f3.png" id="10_f1ej7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_htwby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y4r1p")
+}],
+"loop": 1,
+"name": &"hit",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qlg0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_smehm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_d2wvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3v2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f1ej7")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 7.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htwby"]
-size = Vector2(150, 150)
+size = Vector2(13, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=1351471944]
 script = ExtResource("1_3vyb7")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=399461207]
+texture_filter = 1
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_htwby")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0723388
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=371331322]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_htwby")
-
-[node name="Sprite" type="ColorRect" parent="." unique_id=1993444669]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -75.0
-offset_top = -75.0
-offset_right = 75.0
-offset_bottom = 75.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.24705882, 1, 0.2627451, 1)
-
-[node name="Label" type="Label" parent="Sprite" unique_id=252461330]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "player"
-script = ExtResource("2_qhqgy")
-
-[node name="AimIndicator" type="Polygon2D" parent="." unique_id=1760377291]
-script = ExtResource("2_g2els")
