@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cbsdacrvxms8d"]
 
-[ext_resource type="Texture2D" uid="uid://d031jnb5cw1e8" path="res://assets/textures/prototype/dark/texture_09.png" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://b2ntu6vdtjg38" path="res://scenes/player.tscn" id="2_mx8sn"]
-[ext_resource type="PackedScene" uid="uid://btiu3ggs61ed0" path="res://scenes/enemy.tscn" id="3_ppgk2"]
+[ext_resource type="Script" uid="uid://8bjailg7j62p" path="res://scripts/lock_on_radius.gd" id="3_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://btiu3ggs61ed0" path="res://scenes/enemy.tscn" id="3_w8frs"]
 [ext_resource type="Script" uid="uid://dg60jn70w2fsa" path="res://scripts/mouse_cursor.gd" id="4_mx8sn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htwby"]
@@ -10,37 +10,35 @@ radius = 61.2
 
 [node name="Level" type="Node2D" unique_id=852743307]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=615729711]
-offset_left = -930.0
-offset_top = -535.0
-offset_right = 2772.0
-offset_bottom = 1562.0
-texture = ExtResource("1_w8frs")
-stretch_mode = 1
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1559088652]
+
+[node name="DebugUI" type="Control" parent="." unique_id=1150169042]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Player" parent="." unique_id=1351471944 instance=ExtResource("2_mx8sn")]
-position = Vector2(959, 524)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1559088652]
-position = Vector2(964, 517)
+position = Vector2(-48, 10)
 
 [node name="MouseCursor" type="CanvasLayer" parent="." unique_id=94009564]
 script = ExtResource("4_mx8sn")
 
 [node name="Sprite2D" type="Sprite2D" parent="MouseCursor" unique_id=2116132247]
 
-[node name="LockOnRadius" type="Area2D" parent="MouseCursor" unique_id=1946385847]
+[node name="LockOnRadius" type="Area2D" parent="." unique_id=1946385847]
+script = ExtResource("3_mx8sn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseCursor/LockOnRadius" unique_id=775225045]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockOnRadius" unique_id=775225045]
 shape = SubResource("CircleShape2D_htwby")
 
-[node name="Enemies" type="Node2D" parent="." unique_id=720681690]
+[node name="Enemies" type="Node2D" parent="." unique_id=826767979]
 
-[node name="EnemyBase2" parent="Enemies" unique_id=217677153 instance=ExtResource("3_ppgk2")]
-position = Vector2(1297, 727)
+[node name="EnemyBase" parent="Enemies" unique_id=217677153 instance=ExtResource("3_w8frs")]
+position = Vector2(29, 15)
 
-[node name="EnemyBase" parent="Enemies" unique_id=2053851847 instance=ExtResource("3_ppgk2")]
-position = Vector2(1454, 476)
+[node name="EnemyBase2" parent="Enemies" unique_id=1408809213 instance=ExtResource("3_w8frs")]
+position = Vector2(30, -30)
 
-[connection signal="body_entered" from="MouseCursor/LockOnRadius" to="MouseCursor" method="_on_lock_on_radius_body_entered"]
-[connection signal="body_exited" from="MouseCursor/LockOnRadius" to="MouseCursor" method="_on_lock_on_radius_body_exited"]
+[connection signal="body_entered" from="LockOnRadius" to="LockOnRadius" method="_on_body_entered"]
+[connection signal="body_exited" from="LockOnRadius" to="LockOnRadius" method="_on_body_exited"]
