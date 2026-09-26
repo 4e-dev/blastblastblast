@@ -19,6 +19,7 @@
 
 
 ### Currently working on
+* [ ] Add an art asset
 * [ ] Implement a debug UI to get a better idea of what the player is doing
     * Example: Are they dodging? dashing? shooting? idling? moving?
 * [ ] Player movement: Dashing / dodging
