@@ -19,7 +19,7 @@
 
 
 ### Currently working on
-* [ ] Add an art asset
+* [ ] Update cursor animation when locked onto an enemy
 * [ ] Implement a debug UI to get a better idea of what the player is doing
     * Example: Are they dodging? dashing? shooting? idling? moving?
 * [ ] Player movement: Dashing / dodging
@@ -29,6 +29,7 @@
 
 
 ### Finished
+* [*] Add an art asset
 * [x] Player movement: Mouse lock-on mechanic (locks mouse onto nearest enemy)
     * [x] Create a separate node to represent the player's mouse
     * [x] Create custom cursor asset
