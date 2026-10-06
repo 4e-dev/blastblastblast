@@ -25,11 +25,3 @@ func _physics_process(delta):
 
 	velocity = direction.normalized() * speed
 	move_and_slide()
-
-
-func _on_lock_on_radius_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_lock_on_radius_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.

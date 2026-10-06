@@ -14,7 +14,6 @@ var rotation_speed: float = 1.5
 func _ready() -> void:
 	lock_radius.lock_on_changed.connect(_on_lock_on_changed)
 
-	layer = 10000
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 	default_texture = load("res://assets/textures/cursor/PNG/White/crosshair013.png")

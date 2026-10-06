@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://btiu3ggs61ed0"]
 
 [ext_resource type="Script" uid="uid://dewqw34jdlb22" path="res://scripts/enemy_base.gd" id="1_md0e3"]
-[ext_resource type="Texture2D" uid="uid://c3sha60gt32gb" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f0.png" id="2_c4w8v"]
-[ext_resource type="Texture2D" uid="uid://dot24iflstunt" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f1.png" id="3_xwavj"]
-[ext_resource type="Texture2D" uid="uid://c84w6a31axdo3" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f2.png" id="4_nenq2"]
-[ext_resource type="Texture2D" uid="uid://blscwqargu2fj" path="res://assets/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f3.png" id="5_md484"]
+[ext_resource type="Texture2D" uid="uid://c3sha60gt32gb" path="res://assets/DungeonTileset/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f0.png" id="2_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://dot24iflstunt" path="res://assets/DungeonTileset/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f1.png" id="3_xwavj"]
+[ext_resource type="Texture2D" uid="uid://c84w6a31axdo3" path="res://assets/DungeonTileset/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f2.png" id="4_nenq2"]
+[ext_resource type="Texture2D" uid="uid://blscwqargu2fj" path="res://assets/DungeonTileset/0x72_DungeonTilesetII_v1.7/frames/masked_orc_idle_anim_f3.png" id="5_md484"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_htwby"]
 animations = [{
