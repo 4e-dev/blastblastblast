@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://4eyrapfxx4ib"]
+
+[ext_resource type="FontFile" uid="uid://c5bfuk4okkv4u" path="res://assets/font/PixeloidMono-nAOpP.ttf" id="1_i86ny"]
+
+[resource]
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_i86ny")

@@ -28,6 +28,8 @@
 
 
 ### Finished
+* [x] Update cursor animation when locked onto an enemy
+* [x] Add an art asset
 * [x] Player movement: Mouse lock-on mechanic (locks mouse onto nearest enemy)
     * [x] Create a separate node to represent the player's mouse
     * [x] Create custom cursor asset
